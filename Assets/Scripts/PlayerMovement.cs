@@ -13,12 +13,12 @@ public class PlayerMovement : MonoBehaviour
     CharacterController characterController;
 
     //bool caminar = false; Se crea una variable dependiendo de la animacion;
-
     public float velocidad_caminar=6.0f;
     public float velocidad_correr=10.0f;
+    //public float velocidad_rotacion=200.0f;
     public float cantidad_salto=8.0f;
     public float gravedad =70.0f;
-    //public Animator animator; Se crea solo 1 animator por player;
+    //public Animator animator; //Se crea solo 1 animator por player;
 
     private Vector3 movimiento = Vector3.zero;
 
