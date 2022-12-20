@@ -23,7 +23,7 @@ public class KachMovement : MonoBehaviour
         saltando = false;
     }
 
-    void FixedUpdate() //Para estandarizar el tiempo en que se ejecuta por FPS.
+    void FixedUpdate() //Para estandarizar el tiempo en que se ejecuta por cada FPS.
     {
         transform.Rotate(0, x*Time.deltaTime * velRotacion, 0);
         transform.Translate(0, 0, y*Time.deltaTime * velCorrer);
@@ -31,6 +31,7 @@ public class KachMovement : MonoBehaviour
 
     void Update()
     {
+
         x = Input.GetAxis("Horizontal");
         y = Input.GetAxis("Vertical");
 
