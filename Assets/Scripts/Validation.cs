@@ -28,10 +28,28 @@ public class Validation : MonoBehaviour
     public void ValidarCampos(){
         name = InputPlayerName.text;
         age = byte.Parse(InputPlayerAge.text);
+        
+        // Validar que se ingresen solo numeros y sea mayor de 18
         try{
-            if(age >= 18)
+            if(name.Length >=4 && age >= 18)
             {
                 SceneManager.LoadScene("Game");
+            }
+
+            if(name.Length < 4)
+            {
+                Debug.Log($"Ingresaste un nombre que no es válido");
+            }
+
+            if(name.Length < 4 && age < 18)
+            {
+                Debug.Log($"El nombre ingresado no es válido y eres menor de edad");
+            }
+            else
+
+            if(name.Length < 4 && age >= 18)
+            {
+                Debug.Log($"El nombre ingresado no es válido");
             }
             else
             {
@@ -41,6 +59,10 @@ public class Validation : MonoBehaviour
         catch(Exception ex){
             Debug.Log($"Error en formato de edad {ex.Message}");
         }
-        Debug.Log($"Su nombre es {name}");
+        
     }
 }
+
+
+
+
